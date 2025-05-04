@@ -1,0 +1,1343 @@
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-23
+    [endDate] => 2025-04-24
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientId] => 1
+    [clientName] => Filani Fisteku
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Session CSRF: 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-23
+    [endDate] => 2025-04-24
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Session CSRF: 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Session CSRF: 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientId] => 3
+    [clientName] => Admir Qyqalla
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => WhatsApp
+    [clientId] => 3
+    [rentalId] => 8
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => WhatsApp
+    [clientId] => 3
+    [rentalId] => 8
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => WhatsApp
+    [clientId] => 3
+    [rentalId] => 8
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [range] => Array
+        (
+            [0] => 2025-04-26
+            [1] => 2025-04-27
+            [2] => 50
+        )
+
+    [index] => 2
+    [action] => delete
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => WhatsApp
+    [clientId] => 3
+    [rentalId] => 8
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+    [action] => update
+)
+
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 48
+    [clientName] => Admir Qyqalla
+    [phone] => 045123123
+    [place_contacted] => WhatsApp
+    [clientId] => 3
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+    [action] => add
+)
+
+Session CSRF: 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Phone
+    [clientId] => 3
+    [rentalId] => 8
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => WhatsApp
+    [clientId] => 3
+    [rentalId] => 8
+    [csrf_token] => 8466f3f458f109e972663acf5770ab408c63510dcfac1e7ff8ac2723dfcbaa18
+    [action] => update
+)
+
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-04-24
+    [endDate] => 2025-04-25
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Arben Qyqalla
+    [phone] => 45123123
+    [place_contacted] => WhatsApp
+    [csrf_token] => 502a52bdfff2a9e7a1e2cb11e497e07e8478df8a7f9607e2716b382be3e12deb
+    [action] => add
+)
+
+Session CSRF: 502a52bdfff2a9e7a1e2cb11e497e07e8478df8a7f9607e2716b382be3e12deb
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-04-24
+    [endDate] => 2025-04-25
+    [dailyRate] => 24.6
+    [totalAmount] => 49.2
+    [clientName] => Arben Qyqalla
+    [phone] => 45123123
+    [place_contacted] => Phone
+    [csrf_token] => 502a52bdfff2a9e7a1e2cb11e497e07e8478df8a7f9607e2716b382be3e12deb
+    [action] => add
+)
+
+Session CSRF: 502a52bdfff2a9e7a1e2cb11e497e07e8478df8a7f9607e2716b382be3e12deb
+Update-rental received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-04-24
+    [endDate] => 2025-04-26
+    [dailyRate] => 24.6
+    [totalAmount] => 73.8
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [place_contacted] => Viber
+    [clientId] => 4
+    [rentalId] => 10
+    [csrf_token] => 502a52bdfff2a9e7a1e2cb11e497e07e8478df8a7f9607e2716b382be3e12deb
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-04-24
+    [endDate] => 2025-04-26
+    [dailyRate] => 24.6
+    [totalAmount] => 73.8
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [place_contacted] => Phone
+    [clientId] => 4
+    [rentalId] => 10
+    [csrf_token] => 502a52bdfff2a9e7a1e2cb11e497e07e8478df8a7f9607e2716b382be3e12deb
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-04-24
+    [endDate] => 2025-04-26
+    [dailyRate] => 24.6
+    [totalAmount] => 73.8
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [place_contacted] => Viber
+    [clientId] => 4
+    [rentalId] => 10
+    [csrf_token] => 502a52bdfff2a9e7a1e2cb11e497e07e8478df8a7f9607e2716b382be3e12deb
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 48
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [clientId] => 3
+    [rentalId] => 9
+    [csrf_token] => 74f4d8a61a41c1f29bacf0079d14655c4644b3d55f8dd76ba20313be16788292
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => WhatsApp
+    [clientId] => 3
+    [rentalId] => 8
+    [csrf_token] => 74f4d8a61a41c1f29bacf0079d14655c4644b3d55f8dd76ba20313be16788292
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-23
+    [endDate] => 2025-04-24
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Filani Fisteku
+    [phone] => +1234567890
+    [place_contacted] => Phone
+    [clientId] => 1
+    [rentalId] => 7
+    [csrf_token] => 74f4d8a61a41c1f29bacf0079d14655c4644b3d55f8dd76ba20313be16788292
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-23
+    [endDate] => 2025-04-24
+    [dailyRate] => 25
+    [totalAmount] => 50
+    [clientName] => Filani Fisteku
+    [phone] => 045123123
+    [place_contacted] => WhatsApp
+    [clientId] => 1
+    [rentalId] => 7
+    [csrf_token] => 74f4d8a61a41c1f29bacf0079d14655c4644b3d55f8dd76ba20313be16788292
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [clientId] => 3
+    [rentalId] => 9
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [clientId] => 3
+    [rentalId] => 9
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [clientId] => 3
+    [rentalId] => 9
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 0
+    [totalAmount] => 50
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [clientId] => 3
+    [rentalId] => 9
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 10
+    [totalAmount] => 20
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 48
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 48
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 48
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 48
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 24
+    [totalAmount] => 48
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 10
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 10
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [place_contacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 10
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-25
+    [endDate] => 2025-04-26
+    [dailyRate] => 10
+    [totalAmount] => 10
+    [clientName] => etrit
+    [phone] => 123123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 6
+    [action] => add
+)
+
+Session CSRF: bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 10
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Viber
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-05-01
+    [endDate] => 2025-05-02
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Arben Qyqalla
+    [phone] => 123123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 4
+    [action] => add
+)
+
+Session CSRF: bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-05-01
+    [endDate] => 2025-05-03
+    [dailyRate] => 12.5
+    [totalAmount] => 25
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 4
+    [rentalId] => 11
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-05-01
+    [endDate] => 2025-05-03
+    [dailyRate] => 12.5
+    [totalAmount] => 25
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 4
+    [rentalId] => 11
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-05-01
+    [endDate] => 2025-05-03
+    [dailyRate] => 17.5
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 4
+    [rentalId] => 11
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-27
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 8
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-24
+    [endDate] => 2025-04-25
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 4
+    [rentalId] => 11
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2026-02-02
+    [endDate] => 2026-02-05
+    [dailyRate] => 11.67
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 45123456
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 4
+    [rentalId] => 11
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [rentalId] => 11
+    [action] => delete
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 10
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-23
+    [endDate] => 2025-04-25
+    [dailyRate] => 12.5
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 048402204
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [action] => add
+)
+
+Session CSRF: bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-23
+    [endDate] => 2025-04-24
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 12
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-23
+    [endDate] => 2025-04-23
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => bea49ad17da046428bb7410001088e85a734562d01d24e0e7164a1254df1ee60
+    [clientId] => 3
+    [rentalId] => 12
+    [action] => update
+)
+
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-03-12
+    [endDate] => 2025-03-12
+    [dailyRate] => 123
+    [totalAmount] => 123
+    [clientName] => Admir Qyqalla
+    [phone] => 123123123
+    [placeContacted] => Viber
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [action] => add
+)
+
+Session CSRF: a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+Received data: Array
+(
+    [carId] => 2
+    [startDate] => 2024-12-10
+    [endDate] => 2024-12-12
+    [dailyRate] => 61.5
+    [totalAmount] => 123
+    [clientName] => Arben Qyqalla
+    [phone] => 1231231
+    [placeContacted] => Viber
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 4
+    [action] => add
+)
+
+Session CSRF: a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-28
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 8
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-28
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 8
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-28
+    [dailyRate] => 8.33
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 8
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-02
+    [dailyRate] => 3.34
+    [totalAmount] => 10.01
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-02
+    [dailyRate] => 3.34
+    [totalAmount] => 10.01
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-01
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-02
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-30
+    [endDate] => 2025-05-02
+    [dailyRate] => 3.33
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-29
+    [endDate] => 2025-05-02
+    [dailyRate] => 3.33
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-01
+    [endDate] => 2025-05-02
+    [dailyRate] => 2.5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-29
+    [endDate] => 2025-05-02
+    [dailyRate] => 2.5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-27
+    [endDate] => 2025-05-02
+    [dailyRate] => 2.5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-04-26
+    [endDate] => 2025-04-28
+    [dailyRate] => 12.5
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 8
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-05-01
+    [endDate] => 2025-05-02
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Update-rental received data: Array
+(
+    [carId] => 2
+    [startDate] => 2025-05-01
+    [endDate] => 2025-05-02
+    [dailyRate] => 5
+    [totalAmount] => 10
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => Phone
+    [csrf_token] => a998011057f5acaa5cca7e73a36d3f211d10bec83a28644c82c319d2061217c6
+    [clientId] => 3
+    [rentalId] => 9
+    [action] => update
+)
+
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [clientId] => 3
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 25
+    [totalAmount] => 25
+    [clientName] => Admir Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [clientId] => 3
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Admir Qyqalla
+    [phone] => 045111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Admir Qyqalla
+    [phone] => 045111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Admir Qyqalla
+    [phone] => 045111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Admir Qyqalla
+    [phone] => 045111123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Admir Qyqalla
+    [phone] => 045111123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Admir Qyqalla
+    [phone] => 045111123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+    [clientChoice] => update
+    [clientId] => 3
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Admir Qyqalla
+    [phone] => 045111123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+    [clientChoice] => update
+    [clientId] => 3
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-03
+    [endDate] => 2025-05-04
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-03
+    [endDate] => 2025-05-04
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+    [clientChoice] => update
+    [clientId] => 4
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-03
+    [endDate] => 2025-05-04
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-03
+    [endDate] => 2025-05-04
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+    [clientChoice] => update
+    [clientId] => 4
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-03
+    [endDate] => 2025-05-04
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-03
+    [endDate] => 2025-05-04
+    [dailyRate] => 35
+    [totalAmount] => 35
+    [clientName] => Arben Qyqalla
+    [phone] => 045123123
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [action] => add
+    [clientChoice] => update
+    [clientId] => 4
+)
+
+Session CSRF: d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+Update-rental received data: Array
+(
+    [carId] => 1
+    [startDate] => 2025-05-02
+    [endDate] => 2025-05-03
+    [dailyRate] => 45
+    [totalAmount] => 45
+    [clientName] => Admir Qyqalla
+    [phone] => 45111111
+    [placeContacted] => WhatsApp
+    [csrf_token] => d0d90ae4103160ef4bbcf26c5b6daed782bb2347acc62829a7a7f79925c4fb16
+    [clientId] => 3
+    [rentalId] => 14
+    [action] => update
+)
+

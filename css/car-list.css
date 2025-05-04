@@ -1,0 +1,145 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 2rem;
+    margin: 30px 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.car-list {
+    list-style: none;
+    padding: 0;
+}
+
+.car-item {
+    border: var(--border);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    min-width: 800px;
+}
+
+.car-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.car-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-details {
+    flex: 1;
+}
+
+.car-details h3 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.car-details p {
+    color: var(--text-dark);
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+}
+
+.car-dates {
+    flex: 1;
+    text-align: right;
+}
+
+.car-dates p {
+    color: var(--text-dark);
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+}
+
+.occupied-dates {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.occupied-dates li {
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    margin: 5px 0;
+}
+
+.more-dates {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.more-dates:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .car-content {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .car-dates {
+        text-align: left;
+    }
+
+    .car-item {
+        min-width: auto;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .car-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .car-details p,
+    .car-dates p {
+        font-size: 0.9rem;
+    }
+
+    .occupied-dates li {
+        font-size: 0.8rem;
+    }
+
+    .more-dates {
+        font-size: 0.8rem;
+    }
+}
