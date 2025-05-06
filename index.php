@@ -369,9 +369,9 @@ if ($result->num_rows > 0) {
   <div class="everything">
     <!-- Hero Section -->
     <section class="hero">
-      <h1><span>Mirësevini në </span><span>A1 Rent A Car</span></h1>
-      <p>Përjetoni emocionin e drejtimit të makinave premium me çmime të përballueshme. Rezervoni makinën tuaj të ëndrrave sot!</p>
-      <a href="#featured" class="cta-button">Shiko Makinat Tona</a>
+      <h1><span>Welcome to </span><span>A1 Rent A Car</span></h1>
+      <p>Experience the thrill of driving premium cars at affordable prices. Book your dream car today!</p>
+      <a href="#featured" class="cta-button">View Our Cars</a>
     </section>
     
     <div class="container">
@@ -381,26 +381,26 @@ if ($result->num_rows > 0) {
         <div class="filter">
           <input type="text" id="makeFilter" placeholder="Marka (p.sh., Volkswagen)">
           <select id="transmissionFilter">
-            <option value="">Zgjidh Transmisionin</option>
+            <option value="">Choose Transmission</option>
             <option value="Automatic">Automatik</option>
             <option value="Manual">Manual</option>
           </select>
           <select id="fuelTypeFilter">
-            <option value="">Zgjidh Llojin e Karburantit</option>
+            <option value="">Choose Fuel Type</option>
             <option value="Petrol">Benzinë</option>
             <option value="Diesel">Dizel</option>
             <option value="Hybrid">Hibrid</option>
             <option value="Electric">Elektrik</option>
           </select>
           <select id="seatsFilter">
-            <option value="">Zgjidh Numrin e Ulëseve</option>
-            <option value="2">2 Ulëse</option>
-            <option value="4">4 Ulëse</option>
-            <option value="5">5 Ulëse</option>
-            <option value="7">7 Ulëse</option>
+            <option value="">Choose Fuel Type</option>
+            <option value="2">2 Seats</option>
+            <option value="4">4 Seats</option>
+            <option value="5">5 Seats</option>
+            <option value="7">7 Seats</option>
           </select>
-          <input type="date" id="startDate" placeholder="Data e Fillimit">
-          <input type="date" id="endDate" placeholder="Data e Mbarimit">
+          <input type="date" id="startDate" placeholder="End Date">
+          <input type="date" id="endDate" placeholder="Start Date">
           <button onclick="filterCars()">Filtro</button>
           <button onclick="resetFilter()">Pastro</button>
         </div>
@@ -409,7 +409,7 @@ if ($result->num_rows > 0) {
       
       <!-- Featured Cars -->
       <section id="featured">
-        <h2 class="section-title"><span>Makinat Tona</span> <span>të Veçuara</span></h2>
+        <h2 class="section-title"><span>Our Selected</span> <span>Cars</span></h2>
         <div class="featured-cars" id="carList">
           <!-- Cars will be dynamically inserted here -->
         </div>
@@ -419,10 +419,10 @@ if ($result->num_rows > 0) {
     <!-- Calendar Modal -->
     <div id="overlay"></div>
     <div id="calendarModal">
-      <h3 style="color: #fff">Zgjidh një Datë</h3>
+      <h3 style="color: #fff">Pick a Date</h3>
       <table></table>
       <br>
-      <button onclick="applyFilter()">Apliko</button>
+      <button onclick="applyFilter()">Apply</button>
     </div>
   </div>
   

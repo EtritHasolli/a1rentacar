@@ -1,8 +1,12 @@
 <?php
-$servername = "sql7.freesqldatabase.com";
-$username = "sql7773932"; 
-$password = "1A4XR5m71v";      
-$dbname = "sql7773932";  
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$servername = $_ENV['DatabaseHost'];
+$username = $_ENV['DatabaseUsername'];
+$password = $_ENV['DatabasePassword'];      
+$dbname = $_ENV['DatabaseName'];  
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
