@@ -1,0 +1,16 @@
+Database Host: sql7.freesqldatabase.com
+Database Name: sql7773932
+Database Username: sql7773932
+Database Password: 1A4XR5m71v
+Port number: 3306
+
+a1rentacar.ct.ws
+Account Password: NXLbVDUqOQGGRkq
+
+host: ftpupload.net
+Username: if0_38779887
+password NXLbVDUqOQGGRkq per fileZilla
+port: 21
+
+
+me lan te rentals edhe ni tabel se kur eshte kthy kerri si date
