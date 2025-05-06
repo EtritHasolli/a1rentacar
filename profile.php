@@ -44,7 +44,7 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -191,7 +191,7 @@ $conn->close();
 <body>
     <div class="profile-container">
         <div class="card">
-            <h1>Të Gjitha Rezervimet</h1>
+            <h1>All Rentals</h1>
             <div id="rentalListContainer">
                 <ul id="rentalList"></ul>
             </div>
@@ -219,7 +219,7 @@ $conn->close();
             list.innerHTML = "";
             if (ranges.length === 0) {
                 const li = document.createElement("li");
-                li.innerHTML = `<span>Nuk ka rezervime të regjistruara.</span>`;
+                li.innerHTML = `<span>There are no registered rentals.</span>`;
                 list.appendChild(li);
                 return;
             }
@@ -238,8 +238,8 @@ $conn->close();
                         </div>
                         <div class="dataInRowForm">
                             <div class="pricePart">
-                                <span>${parseFloat(range.daily_rate).toFixed(2)}€/ditë</span>
-                                <span><strong>Totali: ${parseFloat(range.total_amount).toFixed(2)}€</strong></span>
+                                <span>${parseFloat(range.daily_rate).toFixed(2)}€/day</span>
+                                <span><strong>Total: ${parseFloat(range.total_amount).toFixed(2)}€</strong></span>
                             </div>
                         </div>
                     </div>

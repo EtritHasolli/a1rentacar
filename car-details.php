@@ -84,11 +84,11 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detajet e Makinës - <?php echo htmlspecialchars($car ? $car['make'] . ' ' . $car['model'] : 'Nuk u Gjet'); ?></title>
+    <title>Car Details - <?php echo htmlspecialchars($car ? $car['make'] . ' ' . $car['model'] : 'Not Found'); ?></title>
     <link href="css/car-details.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
@@ -96,20 +96,20 @@ $conn->close();
 <body>
     <div class="everything">
         <div class="card">
-            <h2 id="carName"><?php echo htmlspecialchars($car ? $car['make'] . ' ' . $car['model'] . ' ' . $car['transmission'] : 'Makina Nuk u Gjet'); ?></h2>
+            <h2 id="carName"><?php echo htmlspecialchars($car ? $car['make'] . ' ' . $car['model'] . ' ' . $car['transmission'] : 'Car not found'); ?></h2>
             <p id="carDescription"><strong>Përshkrimi:</strong> <?php echo htmlspecialchars($car ? $car['description'] : 'No description available.'); ?></p>
             <?php if (isset($_SESSION['user_id'])) { ?>
-                <button class="editDescriptionBtn" onclick="openDescriptionModal()">Edito Përshkrimin</button>
+                <button class="editDescriptionBtn" onclick="openDescriptionModal()">Edit Description</button>
             <?php } ?>
             <div id="occupiedListContainer">
-                <h3>Rezervimet Aktuale</h3>
+                <h3>Current Reservations</h3>
                 <ul id="occupiedList"></ul>
-                <button class="addRentalBtn" onclick="openRentalModal()">Shto Rezervim</button>
+                <button class="addRentalBtn" onclick="openRentalModal()">Add Rental</button>
             </div>
             <div id="pastRentalsContainer" style="margin-top: 20px;">
-                <button class="togglePastRentalsBtn" onclick="togglePastRentals()">Shiko rezervimet e kaluara të makinës</button>
+                <button class="togglePastRentalsBtn" onclick="togglePastRentals()">View past car reservations</button>
                 <div id="pastRentals" style="display: none;">
-                    <h3>Rezervimet e Kaluara</h3>
+                    <h3>Past Reservations</h3>
                     <ul id="pastOccupiedList"></ul>
                 </div>
             </div>
@@ -120,35 +120,35 @@ $conn->close();
     <!-- Rental Modal -->
     <div id="rentalModal" class="modal">
         <div class="modal-content">
-            <h3 id="modalTitle">Shto Rezervim</h3>
+            <h3 id="modalTitle">Add Rental</h3>
             <form id="rentalForm">
-                <label for="clientSelection">Zgjidh ose edito klientin:</label>
+                <label for="clientSelection">Select or Edit Client</label>
                 <div class="clientNameChoice" style="display: flex;">
-                    <input type="text" id="newClientName" placeholder="Emri i klientit" required>
-                    <span style="align-self: center;">ose</span>
+                    <input type="text" id="newClientName" placeholder="Client name" required>
+                    <span style="align-self: center;">or</span>
                     <select id="existingClient" onchange="populateClientFields()">
-                        <option value="">Zgjidh klientin</option>
+                        <option value="">Select Client</option>
                     </select>
                 </div>
-                <label for="newClientPhone">Numri i Telefonit:</label>
-                <input type="tel" id="newClientPhone" placeholder="p.sh., +383 4x xxx xxx" required>
-                <label for="placeContacted">Mënyra e Kontaktit:</label>
+                <label for="newClientPhone">Phone Number:</label>
+                <input type="tel" id="newClientPhone" placeholder="e.g., +383 4x xxx xxx" required>
+                <label for="placeContacted">Contact Method:</label>
                 <select id="placeContacted" required>
                     <option value="WhatsApp" selected>WhatsApp</option>
                     <option value="Viber">Viber</option>
                     <option value="Phone">Phone</option>
                 </select>
-                <label for="modalStartDate">Data e Fillimit:</label>
+                <label for="modalStartDate">Start Date:</label>
                 <input type="text" id="modalStartDate" class="flatpickr" placeholder="dd.mm.yyyy" required>
-                <label for="modalEndDate">Data e Mbarimit:</label>
+                <label for="modalEndDate">End Date:</label>
                 <input type="text" id="modalEndDate" class="flatpickr" placeholder="dd.mm.yyyy" required>
-                <label for="modalTotalAmount">Shuma Totale (€):</label>
+                <label for="modalTotalAmount">Total Payment (€):</label>
                 <input type="number" id="modalTotalAmount" min="0.01" step="0.01" required placeholder="e.g., 50.00">
-                <label for="modalDailyRate">Çmimi për Ditë (€):</label>
+                <label for="modalDailyRate">Price per day (€):</label>
                 <input type="number" id="modalDailyRate" min="0" step="0.01" readonly>
                 <div class="modal-buttons">
-                    <button type="button" class="cancelBtn" onclick="closeRentalModal()">Anulo</button>
-                    <button type="submit" class="saveBtn">Ruaj</button>
+                    <button type="button" class="cancelBtn" onclick="closeRentalModal()">Cancel</button>
+                    <button type="submit" class="saveBtn">Save</button>
                 </div>
             </form>
         </div>
@@ -157,13 +157,13 @@ $conn->close();
     <!-- Description Modal -->
     <div id="descriptionModal" class="modal">
         <div class="modal-content">
-            <h3>Edito Përshkrimin</h3>
+            <h3>Edit Description</h3>
             <form id="descriptionForm">
-                <label for="modalDescription">Përshkrimi:</label>
-                <textarea id="modalDescription" required placeholder="Shkruani përshkrimin e makinës"></textarea>
+                <label for="modalDescription">Description:</label>
+                <textarea id="modalDescription" required placeholder="Write the car description"></textarea>
                 <div class="modal-buttons">
-                    <button type="button" class="cancelBtn" onclick="closeDescriptionModal()">Anulo</button>
-                    <button type="submit" class="saveBtn">Ruaj</button>
+                    <button type="button" class="cancelBtn" onclick="closeDescriptionModal()">Cancel</button>
+                    <button type="submit" class="saveBtn">Save</button>
                 </div>
             </form>
         </div>
@@ -230,7 +230,7 @@ $conn->close();
         // Populate client dropdown
         function populateExistingClients() {
             const select = document.getElementById('existingClient');
-            select.innerHTML = '<option value="">Zgjidh klientin</option>';
+            select.innerHTML = '<option value="">Select client</option>';
             clients.forEach(client => {
                 const option = document.createElement('option');
                 option.value = client.client_id;
@@ -263,13 +263,13 @@ $conn->close();
         // Initialize UI
         if (car) {
             document.getElementById("carName").textContent = `${car.make} ${car.model} ${car.transmission}`;
-            document.getElementById("carDescription").innerHTML = `<strong>Përshkrimi:</strong> ${car.description || 'No description available.'}`;
+            document.getElementById("carDescription").innerHTML = `<strong>Description:</strong> ${car.description || 'No description available.'}`;
             renderOccupiedList(occupiedRanges);
             renderPastOccupiedList(occupiedRangesPast);
         } else {
             console.error("Car not found for ID:", carId);
-            document.getElementById("carName").textContent = "Makina Nuk u Gjet";
-            document.getElementById("carDescription").innerHTML = `<strong>Përshkrimi:</strong> No description available.`;
+            document.getElementById("carName").textContent = "Car not found";
+            document.getElementById("carDescription").innerHTML = `<strong>Description:</strong> No description available.`;
         }
 
         // Toggle past rentals visibility
@@ -278,10 +278,10 @@ $conn->close();
             const toggleButton = document.querySelector('.togglePastRentalsBtn');
             if (pastRentalsDiv.style.display === 'none') {
                 pastRentalsDiv.style.display = 'block';
-                toggleButton.textContent = 'Fshih rezervimet e kaluara të makinës';
+                toggleButton.textContent = 'Hide the car\'s past reservations';
             } else {
                 pastRentalsDiv.style.display = 'none';
-                toggleButton.textContent = 'Shiko rezervimet e kaluara të makinës';
+                toggleButton.textContent = 'View the car\'s past reservations';
             }
         }
 
@@ -305,12 +305,12 @@ $conn->close();
                         </div>
                         <div class="dataInRowForm">
                             <div class="dataInColForm">
-                                <span>${parseFloat(range.daily_rate).toFixed(2)}€/ditë</span>
+                                <span>${parseFloat(range.daily_rate).toFixed(2)}€/day</span>
                                 <span><strong>${parseFloat(range.total_amount).toFixed(2)}€</strong></span>
                             </div>
                             <div class="dataInColForm">
-                                <button class="modifyBtn" onclick="openRentalModal(${index})">Modifiko</button>
-                                <button class="removeBtn" onclick="removeRange(${index})">Fshi</button>
+                                <button class="modifyBtn" onclick="openRentalModal(${index})">Modify</button>
+                                <button class="removeBtn" onclick="removeRange(${index})">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -333,7 +333,7 @@ $conn->close();
             list.innerHTML = "";
             if (ranges.length === 0) {
                 const li = document.createElement("li");
-                li.innerHTML = `<span>Nuk ka rezervime të kaluara.</span>`;
+                li.innerHTML = `<span>There are no past reservations.</span>`;
                 list.appendChild(li);
                 return;
             }
@@ -353,7 +353,7 @@ $conn->close();
                         </div>
                         <div class="dataInRowForm">
                             <div class="dataInColForm">
-                                <span>${parseFloat(range.daily_rate).toFixed(2)}€/ditë</span>
+                                <span>${parseFloat(range.daily_rate).toFixed(2)}€/day</span>
                                 <span><strong>${parseFloat(range.total_amount).toFixed(2)}€</strong></span>
                             </div>
                         </div>
@@ -392,7 +392,7 @@ $conn->close();
             editingIndex = index;
 
             if (index >= 0) {
-                title.textContent = "Modifiko Rezervimin";
+                title.textContent = "Modify Rental";
                 const range = occupiedRanges[index];
                 newClientInput.value = range.client_name || '';
                 newClientPhone.value = range.phone || '';
@@ -408,7 +408,7 @@ $conn->close();
                 dailyRateInput.value = parseFloat(range.daily_rate).toFixed(2);
                 totalAmountInput.value = parseFloat(range.total_amount).toFixed(2);
             } else {
-                title.textContent = "Shto Rezervim";
+                title.textContent = "Add Rental";
                 newClientInput.value = '';
                 newClientPhone.value = '';
                 placeContacted.value = 'WhatsApp';
@@ -445,13 +445,13 @@ $conn->close();
             endInput._flatpickr.altInput.classList.remove('error');
 
             if (startDate && !isValidDate(startDate)) {
-                startInput._flatpickr.altInput.setCustomValidity('Data e pavlefshme: dita nuk ekziston për muajin e zgjedhur.');
+                startInput._flatpickr.altInput.setCustomValidity('Invalid date: the day does not exist for the selected month.');
                 startInput._flatpickr.altInput.classList.add('error');
                 dailyRateInput.value = '';
                 return;
             }
             if (endDate && !isValidDate(endDate)) {
-                endInput._flatpickr.altInput.setCustomValidity('Data e pavlefshme: dita nuk ekziston për muajin e zgjedhur.');
+                endInput._flatpickr.altInput.setCustomValidity('Invalid date: the day does not exist in the selected month.');
                 endInput._flatpickr.altInput.classList.add('error');
                 dailyRateInput.value = '';
                 return;
@@ -505,27 +505,27 @@ $conn->close();
             const totalAmount = parseFloat(document.getElementById("modalTotalAmount").value);
 
             if (!newClientName) {
-                alert("Ju lutem shkruani emrin e klientit.");
+                alert("Please enter the customer's name.");
                 return;
             }
 
             if (!newClientPhone || !/^\+?[0-9\s-]{7,20}$/.test(newClientPhone)) {
-                alert("Ju lutem shkruani një numër telefoni të vlefshëm (7-20 shifra).");
+                alert("Please enter a valid phone number (7-20 digits).");
                 return;
             }
 
             if (!placeContacted) {
-                alert("Ju lutem zgjidhni një mënyrë kontakti.");
+                alert("Please choose a contact method.");
                 return;
             }
 
             if (!startDate || !isValidDate(startDate)) {
-                alert("Ju lutem shkruani një datë të vlefshme fillimi në formatin dd.mm.yyyy (p.sh., 24.04.2025).");
+                alert("Please enter a valid start date in the format dd.mm.yyyy (e.g., 24.04.2025).");
                 return;
             }
 
             if (!endDate || !isValidDate(endDate)) {
-                alert("Ju lutem shkruani një datë të vlefshme mbarimi në formatin dd.mm.yyyy (p.sh., 24.04.2025).");
+                alert("Please enter a valid end date in the format dd.mm.yyyy (e.g., 24.04.2025).");
                 return;
             }
 
@@ -533,12 +533,12 @@ $conn->close();
             const end = parseDateFromDMY(endDate);
 
             if (!start || !end || isNaN(dailyRate) || dailyRate <= 0 || isNaN(totalAmount) || totalAmount <= 0) {
-                alert("Ju lutem plotësoni të gjitha fushat me vlera të vlefshme.");
+                alert("Please fill in all fields with valid values.");
                 return;
             }
 
             if (new Date(start) > new Date(end)) {
-                alert("Data e mbarimit duhet të jetë pas datës së fillimit.");
+                alert("The end date must be after the start date.");
                 return;
             }
 
@@ -561,12 +561,12 @@ $conn->close();
             }
 
             if (overlappingRental) {
-                const overlapMessage = `Kujdes: Periudha që zgjodhët (${startDate} - ${endDate}) përputhet me një rezervim ekzistues:\n\n` +
-                                    `Klienti: ${overlappingRental.client_name}\n` +
-                                    `Telefoni: ${overlappingRental.phone}\n` +
-                                    `Data: ${formatDateToDMY(overlappingRental.start_date)} - ${formatDateToDMY(overlappingRental.end_date)}\n\n` +
-                                    `Dëshironi të vazhdoni?`;
-                
+                const overlapMessage =  `Warning: The period you selected (${startDate} - ${endDate}) matches an existing reservation:\n\n` +
+                                        `Client: ${overlappingRental.client_name}\n` +
+                                        `Phone: ${overlappingRental.phone}\n` +
+                                        `Date: ${formatDateToDMY(overlappingRental.start_date)} - ${formatDateToDMY(overlappingRental.end_date)}\n\n` +
+                                        `Do you wish to continue?`;
+
                 if (!confirm(overlapMessage)) {
                     return;
                 }
@@ -613,7 +613,7 @@ $conn->close();
 
                 if (data.warning) {
                     const confirmMessage = `${data.message}\n\n` +
-                                        `Dëshironi të përditësoni numrin e telefonit të klientit ekzistues ose të krijoni një klient të ri me të njëjtin emër dhe numër të ndryshëm?`;
+                                        `Would you like to update the phone number of the existing client or create a new client with the same name and a different number?`;
                     const userChoice = confirm(confirmMessage) ? 'update' : 'new';
                     
                     rentalData.clientChoice = userChoice;
@@ -656,7 +656,7 @@ $conn->close();
                     renderOccupiedList(occupiedRanges);
                     closeRentalModal();
                     await fetchClients();
-                    alert(editingIndex >= 0 ? "Rezervimi u përditësua me sukses!" : "Rezervimi u shtua me sukses!");
+                    alert(editingIndex >= 0 ? "Reservation successfully updated!" : "Reservation successfully added!");
                 } else if (data.success) {
                     const rentalInfo = {
                         rental_id: data.rentalId || occupiedRanges[editingIndex]?.rental_id,
@@ -679,13 +679,13 @@ $conn->close();
                     renderOccupiedList(occupiedRanges);
                     closeRentalModal();
                     await fetchClients();
-                    alert(editingIndex >= 0 ? "Rezervimi u përditësua me sukses!" : "Rezervimi u shtua me sukses!");
+                    alert(editingIndex >= 0 ? "Reservation successfully updated!" : "Reservation successfully added!");
                 } else {
                     throw new Error(data.message || 'Failed to save rental');
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Gabim: ' + error.message);
+                alert('Error: ' + error.message);
             }
         }
 
@@ -718,7 +718,7 @@ $conn->close();
             const description = document.getElementById("modalDescription").value.trim();
 
             if (!description) {
-                alert("Ju lutem shkruani një përshkrim.");
+                alert("Please write a description.");
                 return;
             }
 
@@ -743,7 +743,7 @@ $conn->close();
             })
             .then(data => {
                 if (data.success) {
-                    document.getElementById("carDescription").innerHTML = `<strong>Përshkrimi:</strong> ${description}`;
+                    document.getElementById("carDescription").innerHTML = `<strong>Description:</strong> ${description}`;
                     car.description = description;
                     closeDescriptionModal();
                 } else {
@@ -752,7 +752,7 @@ $conn->close();
             })
             .catch(error => {
                 console.error('Error:', error.message);
-                alert('Gabim: ' + error.message);
+                alert('Error: ' + error.message);
             });
         }
 
@@ -793,7 +793,7 @@ $conn->close();
             })
             .catch(error => {
                 console.error('Error:', error.message);
-                alert('Gabim: ' + error.message);
+                alert('Error: ' + error.message);
             });
         }
 

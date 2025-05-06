@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A1 Motors - Footer</title>
+    <title></title>
 </head>
 <style>
     * { 
@@ -120,27 +120,27 @@
                 <div>
                     <!-- A1 Rent A Car Logo -->
                     <!-- <img src="https://via.placeholder.com/150x50?text=A1+Motors" class="logo" alt="A1 Rent A Car Logo"> -->
-                    <p class="description">A1 Rent A Car ofron shërbime të cilësisë së lartë të qirasë së automjeteve me çmime konkurruese dhe shërbim të personalizuar.</p>
+                    <p class="description">A1 Rent A Car offers high-quality car rental services with competitive prices and personalized service.</p>
                 </div>
                 <div class="orariPunes">
-                    <h3>Orari i Punës: 24/7</h3>
+                    <h3>Working Hours: 24/7</h3>
                 </div>
                 <div class="kontakti">
-                    <h3>Na Kontaktoni</h3>
+                    <h3>Contact us</h3>
                     <ul>
                         <li class="adresa">📍 Prishtina International Airport “Adem Jashari”</li>
                         <li class="numri"><a href="tel:+38348204402">📞 +383 48 204 402</a></li>
                         <li>📧 <a id="email" href="mailto:a1rentacar01@gmail.com">a1rentacar01@gmail.com</a></li>
                         <li>
                             <a href="https://wa.me/38348204402" class="whatsapp-btn" target="_blank">
-                                📱 Na kontaktoni në WhatsApp
+                                📱 Contact us on WhatsApp
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 A1 Rent A Car. Të gjitha të drejtat e rezervuara.</p>
+                <p>&copy; 2025 A1 Rent A Car. All rights reserved.</p>
             </div>
         </div>
     </footer>

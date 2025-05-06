@@ -37,16 +37,16 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista e Makinave - A1 Rent a Car</title>
+    <title></title>
     <link href="css/car-list.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h2 class="section-title">Lista e Makinave</h2>
+        <h2 class="section-title">Car List</h2>
         <ul class="car-list" id="carList">
             <!-- Cars will be dynamically inserted here -->
         </ul>
@@ -82,16 +82,16 @@ $conn->close();
                     <div class="car-content">
                         <div class="car-details">
                             <h3>${car.name}</h3>
-                            <p><strong>Përshkrimi:</strong> ${car.description}</p>
+                            <p><strong>Description:</strong> ${car.description}</p>
                         </div>
                         <div class="car-dates">
-                            <p><strong>Datat e zëna:</strong></p>
+                            <p><strong>Occupied Dates:</strong></p>
                             <ul class="occupied-dates">
                                 ${displayedDates.length > 0 
                                     ? displayedDates.map(r => `<li><span>${formatDateToDMY(r.start)}</span> - <span>${formatDateToDMY(r.end)}</span></li>`).join('')
-                                    : '<li>Nuk ka data të zëna</li>'}
+                                    : '<li>There are no occupied dates</li>'}
                             </ul>
-                            ${hasMoreDates ? `<span class="more-dates">Shiko më shumë</span>` : ''}
+                            ${hasMoreDates ? `<span class="more-dates">See more</span>` : ''}
                         </div>
                     </div>
                 </a>

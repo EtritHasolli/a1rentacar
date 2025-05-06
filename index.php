@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>A1 Motors - Premium Car Rental</title>
+  <title>A1 Rent a Car</title>
   <style>
     .everything {
       flex: 1;
@@ -379,18 +379,18 @@ if ($result->num_rows > 0) {
       <?php if($isAdmin) {?>
       <section class="filter-section">
         <div class="filter">
-          <input type="text" id="makeFilter" placeholder="Marka (p.sh., Volkswagen)">
+          <input type="text" id="makeFilter" placeholder="Make (e.g., Volkswagen)">
           <select id="transmissionFilter">
             <option value="">Choose Transmission</option>
-            <option value="Automatic">Automatik</option>
+            <option value="Automatic">Automatic</option>
             <option value="Manual">Manual</option>
           </select>
           <select id="fuelTypeFilter">
             <option value="">Choose Fuel Type</option>
-            <option value="Petrol">Benzinë</option>
-            <option value="Diesel">Dizel</option>
-            <option value="Hybrid">Hibrid</option>
-            <option value="Electric">Elektrik</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Electric">Electric</option>
           </select>
           <select id="seatsFilter">
             <option value="">Choose Fuel Type</option>
@@ -401,15 +401,15 @@ if ($result->num_rows > 0) {
           </select>
           <input type="date" id="startDate" placeholder="End Date">
           <input type="date" id="endDate" placeholder="Start Date">
-          <button onclick="filterCars()">Filtro</button>
-          <button onclick="resetFilter()">Pastro</button>
+          <button onclick="filterCars()">Filter</button>
+          <button onclick="resetFilter()">Clear</button>
         </div>
       </section>
       <?php }?>
       
       <!-- Featured Cars -->
       <section id="featured">
-        <h2 class="section-title"><span>Our Selected</span> <span>Cars</span></h2>
+        <h2 class="section-title"><span>Our List of </span> <span>Cars</span></h2>
         <div class="featured-cars" id="carList">
           <!-- Cars will be dynamically inserted here -->
         </div>
@@ -454,10 +454,10 @@ if ($result->num_rows > 0) {
             </div>
             <div class="rentEdit">
             <?php if(!$isAdmin){?>
-              <a href="${whatsappLink}" class="rent-button" target="_blank">Rezervo Tani</a>
+              <a href="${whatsappLink}" class="rent-button" target="_blank">Rent Now</a>
               <?php }?>
               <?php if($isAdmin) { ?>
-                <a class="rent-button" onclick="editDates(${car.id})">Edito Datat</a>
+                <a class="rent-button" onclick="editDates(${car.id})">Edit Dates</a>
               <?php } ?>
             </div>
           </div>

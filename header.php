@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -279,7 +279,7 @@
                 <ul>
                     <li><a href="index.php" class="active">Home</a></li>
                     <?php if(isset($_SESSION['user_id'])) { ?>
-                    <li><a href="car-list.php">Makinat</a></li>
+                    <li><a href="car-list.php">Cars</a></li>
                     <?php }?>
                 </ul>
             </div>
@@ -300,11 +300,11 @@
         
         <div id="mobile-menu" class="mobile-menu hidden">
             <ul>
-                <li><a href="index.php">Ballina</a></li>
+                <li><a href="index.php">Home</a></li>
                 <?php if(!isset($_SESSION['user_id'])) { ?>
                 <li><a href="login.php">Login</a></li>
                 <?php } else { ?>
-                <li><a href="car-list.php">Lista e Makinave</a></li>
+                <li><a href="car-list.php">Car List</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="functions/logout.php">Logout</a></li>
                 <?php } ?>
