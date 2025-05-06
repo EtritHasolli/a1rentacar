@@ -332,12 +332,10 @@ if ($result->num_rows > 0) {
         min-width: 100px;
       }
 
-      <?php if($isAdmin) {?>
       .rent-button {
         padding: 6px 6px;
         font-size: 0.65rem;
       }
-      <?php }?>
       
       .rentEdit {
         display: flex;
