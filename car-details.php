@@ -30,7 +30,7 @@ $stmt->close();
 // Fetch current rentals (end_date > CURRENT_DATE)
 $occupiedRanges = [];
 if ($car) {
-    $rentalSql = "SELECT r.rental_id, r.start_date, r.end_date, r.daily_rate, r.total_amount, r.place_contacted, c.client_id, c.full_name AS client_name, c.phone 
+    $rentalSql = "SELECT r.rental_id, r.start_date, r.end_date, r.daily_rate, r.total_amount, r.place_contacted, c.client_id, c.full_name AS client_name, c.phone, r.notes 
                   FROM rentals r 
                   JOIN clients c ON r.client_id = c.client_id 
                   WHERE r.car_id = ? AND r.end_date > CURRENT_DATE";
@@ -48,7 +48,8 @@ if ($car) {
             'start_date' => $rental['start_date'],
             'end_date' => $rental['end_date'],
             'daily_rate' => $rental['daily_rate'],
-            'total_amount' => $rental['total_amount']
+            'total_amount' => $rental['total_amount'],
+            'notes' => $rental['notes']
         ];
     }
     $stmt->close();
@@ -57,7 +58,7 @@ if ($car) {
 // Fetch past rentals (end_date <= CURRENT_DATE)
 $occupiedRangesPast = [];
 if ($car) {
-    $pastRentalSql = "SELECT r.rental_id, r.start_date, r.end_date, r.daily_rate, r.total_amount, r.place_contacted, c.client_id, c.full_name AS client_name, c.phone 
+    $pastRentalSql = "SELECT r.rental_id, r.start_date, r.end_date, r.daily_rate, r.total_amount, r.place_contacted, c.client_id, c.full_name AS client_name, c.phone, r.notes 
                       FROM rentals r 
                       JOIN clients c ON r.client_id = c.client_id 
                       WHERE r.car_id = ? AND r.end_date <= CURRENT_DATE";
@@ -75,7 +76,8 @@ if ($car) {
             'start_date' => $rental['start_date'],
             'end_date' => $rental['end_date'],
             'daily_rate' => $rental['daily_rate'],
-            'total_amount' => $rental['total_amount']
+            'total_amount' => $rental['total_amount'],
+            'notes' => $rental['notes']
         ];
     }
     $stmt->close();
@@ -122,30 +124,34 @@ $conn->close();
         <div class="modal-content">
             <h3 id="modalTitle">Add Rental</h3>
             <form id="rentalForm">
-                <label for="clientSelection">Select or Edit Client</label>
-                <div class="clientNameChoice" style="display: flex;">
-                    <input type="text" id="newClientName" placeholder="Client name" required>
-                    <span style="align-self: center;">or</span>
-                    <select id="existingClient" onchange="populateClientFields()">
-                        <option value="">Select Client</option>
+                <div class="modal-scroll-area">
+                    <label for="clientSelection">Select or Edit Client</label>
+                    <div class="clientNameChoice" style="display: flex;">
+                        <input type="text" id="newClientName" placeholder="Client name" required>
+                        <span style="align-self: center;">or</span>
+                        <select id="existingClient" onchange="populateClientFields()">
+                            <option value="">Select Client</option>
+                        </select>
+                    </div>
+                    <label for="newClientPhone">Phone Number:</label>
+                    <input type="tel" id="newClientPhone" placeholder="e.g., +383 4x xxx xxx" required>
+                    <label for="placeContacted">Contact Method:</label>
+                    <select id="placeContacted" required>
+                        <option value="WhatsApp" selected>WhatsApp</option>
+                        <option value="Viber">Viber</option>
+                        <option value="Phone">Phone</option>
                     </select>
+                    <label for="modalStartDate">Start Date:</label>
+                    <input type="text" id="modalStartDate" class="flatpickr" placeholder="dd.mm.yyyy" required>
+                    <label for="modalEndDate">End Date:</label>
+                    <input type="text" id="modalEndDate" class="flatpickr" placeholder="dd.mm.yyyy" required>
+                    <label for="modalTotalAmount">Total Payment (€):</label>
+                    <input type="number" id="modalTotalAmount" min="0.01" step="0.01" required placeholder="e.g., 50.00">
+                    <label for="modalDailyRate">Price per day (€):</label>
+                    <input type="number" id="modalDailyRate" min="0" step="0.01" readonly>
+                    <label for="modalNotes">Client Requests:</label>
+                    <textarea id="modalNotes" placeholder="Enter any special requests or notes"></textarea>
                 </div>
-                <label for="newClientPhone">Phone Number:</label>
-                <input type="tel" id="newClientPhone" placeholder="e.g., +383 4x xxx xxx" required>
-                <label for="placeContacted">Contact Method:</label>
-                <select id="placeContacted" required>
-                    <option value="WhatsApp" selected>WhatsApp</option>
-                    <option value="Viber">Viber</option>
-                    <option value="Phone">Phone</option>
-                </select>
-                <label for="modalStartDate">Start Date:</label>
-                <input type="text" id="modalStartDate" class="flatpickr" placeholder="dd.mm.yyyy" required>
-                <label for="modalEndDate">End Date:</label>
-                <input type="text" id="modalEndDate" class="flatpickr" placeholder="dd.mm.yyyy" required>
-                <label for="modalTotalAmount">Total Payment (€):</label>
-                <input type="number" id="modalTotalAmount" min="0.01" step="0.01" required placeholder="e.g., 50.00">
-                <label for="modalDailyRate">Price per day (€):</label>
-                <input type="number" id="modalDailyRate" min="0" step="0.01" readonly>
                 <div class="modal-buttons">
                     <button type="button" class="cancelBtn" onclick="closeRentalModal()">Cancel</button>
                     <button type="submit" class="saveBtn">Save</button>
@@ -314,6 +320,7 @@ $conn->close();
                             </div>
                         </div>
                     </div>
+                    ${range.notes ? `<div class='rentalNotes'><strong>Client Requests:</strong> ${escapeHTML(range.notes)}</div>` : ''}
                 `;
                 list.appendChild(li);
             });
@@ -358,6 +365,7 @@ $conn->close();
                             </div>
                         </div>
                     </div>
+                    ${range.notes ? `<div class='rentalNotes'><strong>Client Requests:</strong> ${escapeHTML(range.notes)}</div>` : ''}
                 `;
                 list.appendChild(li);
             });
@@ -388,6 +396,7 @@ $conn->close();
             const endInput = document.getElementById("modalEndDate");
             const dailyRateInput = document.getElementById("modalDailyRate");
             const totalAmountInput = document.getElementById("modalTotalAmount");
+            const modalNotes = document.getElementById("modalNotes");
 
             editingIndex = index;
 
@@ -407,6 +416,7 @@ $conn->close();
                 
                 dailyRateInput.value = parseFloat(range.daily_rate).toFixed(2);
                 totalAmountInput.value = parseFloat(range.total_amount).toFixed(2);
+                modalNotes.value = range.notes || '';
             } else {
                 title.textContent = "Add Rental";
                 newClientInput.value = '';
@@ -419,6 +429,7 @@ $conn->close();
                 
                 dailyRateInput.value = '';
                 totalAmountInput.value = '';
+                modalNotes.value = '';
             }
 
             modal.style.display = "flex";
@@ -503,6 +514,7 @@ $conn->close();
             const endDate = document.getElementById("modalEndDate")._flatpickr.altInput.value;
             const dailyRate = parseFloat(document.getElementById("modalDailyRate").value);
             const totalAmount = parseFloat(document.getElementById("modalTotalAmount").value);
+            const modalNotes = document.getElementById("modalNotes").value.trim();
 
             if (!newClientName) {
                 alert("Please enter the customer's name.");
@@ -581,7 +593,8 @@ $conn->close();
                 clientName: newClientName,
                 phone: newClientPhone,
                 placeContacted: placeContacted,
-                csrf_token: csrfToken
+                csrf_token: csrfToken,
+                notes: modalNotes
             };
 
             if (existingClientId) {
@@ -644,7 +657,8 @@ $conn->close();
                         start_date: start,
                         end_date: end,
                         daily_rate: dailyRate,
-                        total_amount: totalAmount
+                        total_amount: totalAmount,
+                        notes: modalNotes
                     };
 
                     if (editingIndex >= 0) {
@@ -667,7 +681,8 @@ $conn->close();
                         start_date: start,
                         end_date: end,
                         daily_rate: dailyRate,
-                        total_amount: totalAmount
+                        total_amount: totalAmount,
+                        notes: modalNotes
                     };
 
                     if (editingIndex >= 0) {
@@ -803,6 +818,16 @@ $conn->close();
                 closeRentalModal();
                 closeDescriptionModal();
             }
+        });
+
+        // Close modal when clicking outside the modal-content
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('mousedown', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    // Optionally reset editingIndex or other modal state here if needed
+                }
+            });
         });
     </script>
 </body>

@@ -24,93 +24,115 @@
     }
 
     .footer {
-        background: var(--primary, #1a1a2e);
-        color: white;
-        padding: 40px 20px;
+        background: linear-gradient(135deg, #1a1a2e 60%, #16213e 100%);
+        color: #fff;
+        padding: 48px 20px 24px 20px;
         margin-top: auto;
+        border-top: 4px solid #25D366;
+        box-shadow: 0 -2px 24px rgba(0,0,0,0.08);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .footer-container { 
-        max-width: 1200px; 
+        max-width: 1300px; 
         margin: 0 auto; 
     }
 
     .footer-grid { 
         display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-        gap: 20px; 
-        text-align: center;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+        gap: 32px; 
+        text-align: left;
+        align-items: flex-start;
     }
 
-    h3 { 
-        font-size: 18px; 
+    .footer .logo {
+        max-width: 140px;
+        height: auto;
+        margin-bottom: 18px;
+        display: block;
+    }
+
+    .footer h3 { 
+        font-size: 1.15rem; 
+        margin-bottom: 12px; 
+        color: #25D366;
+        letter-spacing: 1px;
+    }
+    
+    .footer .description { 
+        color: #e0e0e0; 
+        font-size: 1rem; 
         margin-bottom: 10px; 
+        line-height: 1.6;
     }
     
-    .description { 
-        color: #ccc; 
-        margin-top: 10px; 
-    }
-    
-    ul { 
+    .footer ul { 
         list-style: none; 
+        padding: 0;
+        margin: 0;
     }
     
-    ul li { 
-        margin-bottom: 8px; 
-        color: #ccc; 
+    .footer ul li { 
+        margin-bottom: 10px; 
+        color: #e0e0e0; 
+        font-size: 1rem; 
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .footer a {
+        color: #25D366;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-weight: 500;
+    }
+    
+    .footer a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+    
+    .footer .whatsapp-btn {
+        display: inline-block;
+        background: #25D366;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        margin-top: 8px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background 0.3s, color 0.3s;
+        box-shadow: 0 2px 8px rgba(37,211,102,0.08);
+    }
+    
+    .footer .whatsapp-btn:hover {
+        background: #128C7E;
+        color: #fff;
     }
     
     .footer-bottom { 
         text-align: center; 
-        margin-top: 20px; 
-        color: #ccc; 
+        margin-top: 32px; 
+        color: #bdbdbd; 
+        font-size: 0.98rem; 
+        letter-spacing: 0.5px;
     }
     
-    .whatsapp-btn {
-        display: inline-block;
-        background: #25D366;
-        color: white;
-        padding: 8px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-top: 10px;
-        transition: background 0.3s;
-    }
-    
-    .whatsapp-btn:hover {
-        background: #128C7E;
-    }
-    
-    .logo {
-        max-width: 150px;
-        height: auto;
-        margin-bottom: 15px;
-    }
-
-    .orariPunes h3, .kontakti h3 {
-        color: var(--text-light);
-    }
-
-    #email:link {
-        color: var(--text-light);
-    }
-
-    #email:visited {
-        color: var(--gray);
-    }
-    
-    .adresa {
-        color: var(--text-light);
-    }
-
-    .numri a,
-    .numri a:link,
-    .numri a:visited,
-    .numri a:hover,
-    .numri a:active {
-        color: rgb(31, 221, 255);
-        text-decoration: none;
+    @media (max-width: 600px) {
+        .footer {
+            padding: 32px 8px 16px 8px;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+        .footer .logo {
+            margin: 0 auto 16px auto;
+        }
     }
 </style>
 <body>
@@ -118,19 +140,20 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div>
-                    <!-- A1 Rent A Car Logo -->
-                    <!-- <img src="https://via.placeholder.com/150x50?text=A1+Motors" class="logo" alt="A1 Rent A Car Logo"> -->
+                    <!-- Uncomment and update the src to use your real logo -->
+                    <!-- <img src="images/logo1.png?v=1" class="logo" alt="A1 Rent A Car Logo"> -->
                     <p class="description">A1 Rent A Car offers high-quality car rental services with competitive prices and personalized service.</p>
                 </div>
                 <div class="orariPunes">
-                    <h3>Working Hours: 24/7</h3>
+                    <h3>Working Hours</h3>
+                    <ul><li>24/7</li></ul>
                 </div>
                 <div class="kontakti">
                     <h3>Contact us</h3>
                     <ul>
-                        <li class="adresa">📍 Prishtina International Airport “Adem Jashari”</li>
-                        <li class="numri"><a href="tel:+38348204402">📞 +383 48 204 402</a></li>
-                        <li>📧 <a id="email" href="mailto:a1rentacar01@gmail.com">a1rentacar01@gmail.com</a></li>
+                        <li>📍 Prishtina International Airport “Adem Jashari”</li>
+                        <li>📞 <a href="tel:+38348204402">+383 48 204 402</a></li>
+                        <li>📧 <a href="mailto:a1rentacar01@gmail.com">a1rentacar01@gmail.com</a></li>
                         <li>
                             <a href="https://wa.me/38348204402" class="whatsapp-btn" target="_blank">
                                 📱 Contact us on WhatsApp

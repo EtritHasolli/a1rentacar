@@ -14,7 +14,7 @@ $userId = $_SESSION['user_id'];
 $rentals = [];
 $sql = $rentalSql = "SELECT r.rental_id, r.start_date, r.end_date, r.daily_rate, r.total_amount, r.place_contacted,
                c.client_id, c.full_name AS client_name, c.phone,
-               cars.make, cars.model, cars.transmission
+               cars.make, cars.model, cars.transmission, r.notes
                 FROM rentals r
                 JOIN clients c ON r.client_id = c.client_id
                 JOIN cars ON r.car_id = cars.car_id
@@ -36,7 +36,8 @@ while ($rental = $result->fetch_assoc()) {
         'total_amount' => $rental['total_amount'],
         'car_make' => $rental['make'],
         'car_model' => $rental['model'],
-        'car_transmission' => $rental['transmission']
+        'car_transmission' => $rental['transmission'],
+        'notes' => $rental['notes']
     ];
 }
 $stmt->close();
@@ -49,140 +50,116 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profili Im</title>
-    <link href="css/car-details.css" rel="stylesheet"/>
     <!-- Include Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <style>
-        .card h1{
-            margin:  auto;
-        }
-
         .profile-container {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             width: 100%;
-            padding: 1rem;
+            padding: 2rem 1rem;
             box-sizing: border-box;
-            min-height: auto;
+            min-height: 100vh;
+            background: #f6f8fa;
+            flex: none;
+            margin-bottom: 3rem;
         }
-
-        .rentalData {
+        .card {
             display: flex;
             flex-direction: column;
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            /* margin: 2rem 0; */
+            /* gap: 2.5rem; */
         }
-
+        .card h1 {
+            margin: 0 0 2rem 0;
+            font-size: 2.1rem;
+            color: var(--primary);
+            text-align: left;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
         #rentalListContainer {
             margin-top: 0.625rem;
-            background-color: var(--background-color);
-            padding: 0.9375rem;
             border-radius: 0.625rem;
-            border: var(--border);
         }
-
         #rentalList {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-
         #rentalList li {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center;
-            gap: 0.3125rem;
-            margin-bottom: 0.75rem;
+            align-items: flex-start;
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
             color: var(--text-dark);
+            background: #fff;
+            border: var(--border);
+            border-radius: 0.5rem;
+            padding: 1.2rem 1rem;
+            box-shadow: 0 2px 8px rgba(26,26,46,0.04);
         }
-
+        .rentalData {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .rentalData strong {
+            color: var(--primary);
+        }
+        .dataInRowForm {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
         .pricePart {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            gap: 1.2rem;
+            font-size: 1.08rem;
+            color: var(--primary-dark);
         }
-
+        .pricePart strong {
+            color: var(--primary);
+        }
         /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .profile-container {
-                padding: 0.9375rem;
-                align-items: center;
+        @media (max-width: 900px) {
+            .card {
+                padding: 1.5rem 0.5rem;
             }
-
             #rentalList li {
                 flex-direction: column;
-                align-items: stretch;
-                gap: 0.3125rem;
-                padding-bottom: 0.625rem;
-                position: relative;
-            }
-
-            #rentalList li .rentalData {
-                flex-direction: column;
-            }
-
-            #rentalList li:not(:last-child)::after {
-                content: "";
-                display: block;
-                height: 1px;
-                background-color: var(--primary);
-                margin-top: 0.625rem;
-                margin-bottom: 0.3125rem;
-            }
-
-            #rentalList input[type="text"] {
-                width: 100%;
-            }
-
-            #rentalList .dataInRowForm {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
+                gap: 0.7rem;
+                padding: 1rem 0.7rem;
             }
         }
-
-        @media (max-width: 480px) {
-            #rentalListContainer {
-                padding: 0.9375rem;
-            }
-
-            #rentalList li .dataInRowForm {
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: space-evenly;
-                gap: 0.5rem;
-            }
-
-            #rentalList .dataInRowForm span {
-                display: block;
-                width: 100%;
-                padding: 0.25rem 0;
-            }
-        }
-
-        @media (max-width: 380px) {
-            #rentalList input[type="text"] {
-                padding: 4px;
-                width: auto;
-                min-width: 6rem;
-                font-size: 0.85rem;
-            }
-
-            #rentalListContainer {
+        @media (max-width: 600px) {
+            .profile-container {
                 padding: 0.5rem;
             }
-
-            #rentalList li .dataInRowForm {
-                flex-direction: row;
-                align-items: center;
-                gap: 0.1rem;
+            .card {
+                padding: 0.7rem 0.2rem;
+                margin: 1rem 0;
             }
-
-            #rentalList .dataInRowForm span {
-                display: block;
-                width: 100%;
-                padding: 0.25rem 0;
+            .card h1 {
+                font-size: 1.2rem;
+            }
+            #rentalListContainer {
+                padding: 0.7rem 0.3rem;
+            }
+            #rentalList li {
+                font-size: 0.97rem;
+                padding: 0.7rem 0.5rem;
             }
         }
     </style>
@@ -243,6 +220,9 @@ $conn->close();
                             </div>
                         </div>
                     </div>
+                    <?php if (!empty($range['notes'])): ?>
+                        <div class="rentalNotes"><strong>Client Requests:</strong> <?php echo htmlspecialchars($range['notes']); ?></div>
+                    <?php endif; ?>
                 `;
                 list.appendChild(li);
             });

@@ -71,7 +71,7 @@
         background-color: var(--primary);
         width: 100%;
         box-shadow: var(--shadow);
-        position: reltaive;
+        position: relative;
         top: 0;
         z-index: 1000;
     }
@@ -80,7 +80,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1500px;
         padding: 15px 5px;
     }
 
@@ -92,7 +91,7 @@
     }
 
     .brand-name {
-        display:flex;
+        display: flex;
         flex-direction: row;
         align-items: center;
         gap: 10px;
@@ -100,6 +99,16 @@
         font-size: 23px;
         font-weight: bold;
         letter-spacing: 1px;
+    }
+
+    .brand-name img {
+        width: 45px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .brand-name:hover img {
+        transform: scale(1.05);
     }
 
     .menu {
@@ -134,45 +143,6 @@
         background: var(--header-btn-hover);
     }
 
-    .menu-icon {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
-        color: white;
-        padding: 10px;
-    }
-
-    .mobile-menu {
-        display: none;
-        background: var(--primary-dark);
-        text-align: center;
-        padding: 10px 0;
-        width: 100%;
-    }
-
-    .mobile-menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .mobile-menu ul li {
-        padding: 12px 0;
-    }
-
-    .mobile-menu ul li a {
-        color: var(--text-light);
-        text-decoration: none;
-        font-size: 16px;
-        padding: 10px 20px;
-        display: block;
-        transition: var(--transition);
-    }
-
-    .mobile-menu ul li a:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
     .auth-menu {
         cursor: pointer;
         font-size: 24px;
@@ -186,10 +156,6 @@
         background: rgba(255, 255, 255, 0.1);
     }
 
-    #auth-toggle {
-        display: none;
-    }
-
     .auth-dropdown {
         position: absolute;
         right: 20px;
@@ -201,10 +167,6 @@
         box-shadow: var(--shadow);
         z-index: 100;
         min-width: 180px;
-    }
-
-    #auth-toggle:checked + .auth-dropdown {
-        display: block;
     }
 
     .auth-dropdown a {
@@ -231,14 +193,37 @@
         border-bottom: 8px solid white;
     }
 
-    @media (min-width: 1025px) {
-        .mobile-menu {
-            display: none;
-        }
+    .mobile-menu {
+        display: none;
+        background: var(--primary-dark);
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
 
-        .mobile-menu.active {
-            display: none;
-        }
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu ul li {
+        padding: 0;
+    }
+
+    .mobile-menu ul li a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 15px 20px;
+        display: block;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-menu ul li a:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
 
     @media (max-width: 1024px) {
@@ -257,13 +242,29 @@
             top: 50px;
         }
 
-        .mobile-menu.active {
-            display: block;
-        }
-
         .brand {
             justify-content: center;
             padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header-container {
+            padding: 12px 15px;
+        }
+
+        .brand-name {
+            font-size: 1.1rem;
+            gap: 10px;
+        }
+
+        .brand-name img {
+            width: 30px;
+        }
+
+        .auth-menu {
+            font-size: 1.2rem;
+            padding: 6px 12px;
         }
     }
     
@@ -286,7 +287,6 @@
             
             <div class="menu-cars">
                 <label class="auth-menu" for="auth-toggle" onclick="toggleMenu()">☰</label>
-                <input type="checkbox" id="auth-toggle">
                 <div class="auth-dropdown" id="auth-dropdown">
                     <?php if(!isset($_SESSION['user_id'])) { ?>
                     <a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a>
