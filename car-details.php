@@ -304,7 +304,7 @@ $conn->close();
                         <span><strong>${escapeHTML(range.client_name || 'Unknown')}</strong> (${escapeHTML(range.phone || 'N/A')}, ${escapeHTML(range.place_contacted || 'N/A')})</span>
                     </div>
                     <div class="rentalData">
-                        <div class="dataInRowForm">
+                        <div class="dataInRowForm" style="width: max-content;">
                             <input type="text" class="flatpickr-display" value="${startDate}" disabled>
                             →
                             <input type="text" class="flatpickr-display" value="${endDate}" disabled>
@@ -353,7 +353,7 @@ $conn->close();
                         <span><strong>${escapeHTML(range.client_name || 'Unknown')}</strong> (${escapeHTML(range.phone || 'N/A')}, ${escapeHTML(range.place_contacted || 'N/A')})</span>
                     </div>
                     <div class="rentalData">
-                        <div class="dataInRowForm">
+                        <div class="dataInRowForm" style="width: max-content;">
                             <input type="text" class="flatpickr-display" value="${startDate}" disabled>
                             →
                             <input type="text" class="flatpickr-display" value="${endDate}" disabled>

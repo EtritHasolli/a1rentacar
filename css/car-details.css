@@ -20,8 +20,6 @@
     max-width: 1100px;
     height: 100%;
     justify-content: space-between;
-    /* margin: 2rem 0; */
-    /* gap: 2.5rem; */
 }
 
 .card-details-main {
@@ -156,514 +154,247 @@
     color: #fff;
 }
 
-@media (max-width: 900px) {
-    .card {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem 0.5rem;
-    }
-    .card-reservations {
-        min-width: 0;
-        padding: 1rem 0.5rem;
-    }
+/* New Modify and Remove Button Styles */
+.modifyBtn, .removeBtn {
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(26,26,46,0.06);
 }
 
-@media (max-width: 600px) {
-    .everything {
-        padding: 0.5rem;
-    }
-    .card {
-        padding: 0.5rem 0.2rem;
-        margin: 1rem 0;
-    }
-    #carName, h2 {
-        font-size: 1.2rem;
-    }
-    #carDescription {
-        font-size: 0.98rem;
-        padding: 0.7rem 0.5rem;
-    }
-    #occupiedList li, #pastOccupiedList li {
-        font-size: 0.95rem;
-        padding: 0.7rem 0.5rem;
-    }
+.modifyBtn {
+    background-color: var(--primary);
+    color: white;
 }
 
+.modifyBtn:hover {
+    background-color: var(--primary-dark);
+}
+
+.removeBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.removeBtn:hover {
+    background-color: #c82333;
+}
+
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(30, 34, 45, 0.45);
-    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
     z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s;
 }
 
 .modal-content {
-    background: #fff;
-    padding: 0;
-    border-radius: 1.1rem;
-    width: 95%;
-    max-width: 420px;
-    box-shadow: 0 8px 40px rgba(26,26,46,0.18), 0 1.5px 8px rgba(26,26,46,0.10);
-    color: var(--text-dark);
-    position: relative;
-    animation: modalPop 0.25s cubic-bezier(.4,2,.6,1) 1;
-    display: flex;
-    flex-direction: column;
-    height: 90vh;
-    min-height: 200px;
-    max-height: 90vh;
-    overflow: hidden;
-}
-
-.modal-scroll-area {
-    flex: 1 1 auto;
-    overflow-y: auto;
-    min-height: 0;
-    padding: 0 1.5rem 1.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-}
-
-@keyframes modalPop {
-    0% { transform: scale(0.95) translateY(30px); opacity: 0; }
-    100% { transform: scale(1) translateY(0); opacity: 1; }
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .modal-content h3 {
-    margin: 0;
     color: var(--primary);
-    font-size: 1.35rem;
-    font-weight: 700;
-    padding: 1.2rem 1.5rem 0.5rem 1.5rem;
-    text-align: left;
-    background: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 2;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
-.modal-content form {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 0;
+.modal-scroll-area {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
+/* Form Elements */
 .modal-content label {
-    font-size: 1.05rem;
-    color: var(--primary-dark);
+    display: block;
+    margin: 15px 0 5px;
+    color: var(--text-dark);
     font-weight: 500;
-    margin-bottom: 0.3rem;
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="number"],
-.modal-content input[type="tel"],
+.modal-content input,
 .modal-content select,
 .modal-content textarea {
-    background-color: var(--background-color);
-    border: var(--border);
-    border-radius: 0.5rem;
-    color: var(--text-dark);
-    padding: 0.6rem 0.7rem;
-    font-size: 1rem;
     width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 0.2rem;
-    transition: border-color 0.2s;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .modal-content input:focus,
 .modal-content select:focus,
 .modal-content textarea:focus {
-    outline: none;
     border-color: var(--primary);
-    background: #f0f4fa;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26,26,46,0.1);
 }
 
 .modal-content textarea {
+    min-height: 100px;
     resize: vertical;
-    min-height: 6.25rem;
-    font-size: 1rem;
 }
 
-.modal-content .modal-buttons {
+/* Modal Buttons */
+.modal-buttons {
     display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-    margin-top: 1.2rem;
-    padding: 1rem 1.5rem 1.2rem 1.5rem;
-    background: #fff;
-    position: sticky;
-    bottom: 0;
-    z-index: 2;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
 }
 
-.modal-content button {
-    padding: 0.6rem 1.4rem;
-    border: none;
-    border-radius: 0.5rem;
+.cancelBtn, .saveBtn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
     cursor: pointer;
-    font-size: 1.05rem;
-    font-weight: 600;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(26,26,46,0.06);
+    transition: all 0.3s ease;
 }
 
 .cancelBtn {
-    background-color: #6c757d;
-    color: white;
+    background: #f8f9fa;
+    color: var(--text-dark);
+    border: 2px solid #e0e0e0;
 }
 
 .cancelBtn:hover {
-    background-color: #5a6268;
-    color: #fff;
+    background: #e9ecef;
+    border-color: #dee2e6;
 }
 
 .saveBtn {
-    background-color: var(--primary);
+    background: var(--primary);
     color: white;
+    border: none;
 }
 
 .saveBtn:hover {
-    background-color: var(--primary-dark);
-    color: #fff;
+    background: #2a2a4a;
+    transform: translateY(-2px);
 }
 
-#newClientName, #existingClient {
-    background: var(--background-color);
-    border: var(--border);
-    border-radius: 0.375rem;
-    color: var(--text-dark);
-    padding: 0.25rem;
-    font-size: 0.9375rem;
-    width: 100%;
-    box-sizing: border-box;
+/* Calendar Styles */
+#calendar {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
 }
 
-#newClientName:focus, #existingClient:focus {
-    outline: none;
-    border-color: var(--primary);
-}
-
-.clientNameChoice {
-    gap: 10px;
-}
-
-.flatpickr-input {
-    background-color: var(--background-color);
-    border: var(--border);
-    border-radius: 0.375rem;
-    color: var(--text-dark);
-    padding: 0.25rem;
-    font-size: 0.8125rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.flatpickr-input:focus {
-    outline: none;
-    border-color: var(--primary);
-}
-
-.flatpickr-calendar {
-    font-family: Arial, sans-serif;
-}
-
-.flatpickr-day.selected {
-    background: #007bff;
-    border-color: #007bff;
-}
-
-.flatpickr-display {
-    background: var(--background-color);
-    border: var(--border);
-    border-radius: 0.375rem;
-    color: var(--text-dark);
-    padding: 0.3rem;
-    font-size: 0.8rem;
-    min-width: 7.5rem;
-    cursor: default;
-}
-
-.flatpickr-alt-input.error {
-    border: 2px solid red;
-    background-color: #ffe6e6;
-}
-
-.flatpickr-alt-input.error::placeholder {
-    color: red;
-}
-
-#pastRentals {
-    margin-top: 10px;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .everything {
-        padding: 0.9375rem;
-        align-items: center;
-    }
-    
-    .card {
-        padding: 1.25rem;
-        margin: 0.625rem 0;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
+        padding: 1rem 0.5rem;
     }
 
-    .flatpickr-calendar {
-        display: none !important;
-        visibility: hidden;
-        pointer-events: none;
-        font-family: Arial, sans-serif;
+    .card {
+        padding: 1.5rem 1rem;
     }
-    
+
+    .card-details-main {
+        gap: 1rem;
+    }
+
+    .card-reservations {
+        padding: 1rem 0.75rem;
+        min-width: unset;
+    }
+
+    #carName, h2 {
+        font-size: 1.8rem;
+    }
+
+    #carDescription {
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+    }
+
     #occupiedList li, #pastOccupiedList li {
         flex-direction: column;
-        align-items: stretch;
-        gap: 0.3125rem;
-        padding-bottom: 0.625rem;
-        position: relative;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.875rem;
     }
 
     #occupiedList li .rentalData, #pastOccupiedList li .rentalData {
-        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
     }
-    
-    #occupiedList li:not(:last-child)::after, #pastOccupiedList li:not(:last-child)::after {
-        content: "";
-        display: block;
-        height: 1px;
-        background-color: var(--primary);
-        margin-top: 0.625rem;
-        margin-bottom: 0.3125rem;
-    }
-    
-    #occupiedList .dataInRowForm, #pastOccupiedList .dataInRowForm {
+
+    .rental-actions {
+        width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
+        gap: 0.5rem;
     }
-    
-    #occupiedList button {
-        width: 100%;
-        margin-top: 0.3125rem;
-        box-sizing: border-box;
+
+    .modifyBtn, .removeBtn {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        justify-content: center;
     }
-    
+
     .addRentalBtn, .editDescriptionBtn {
-        max-width: 100%;
-    }
-    
-    .modal-content {
-        width: 95%;
-        padding: 0.9375rem;
-    }
-    
-    .modal-content .modal-buttons {
-        flex-direction: column;
-    }
-    
-    .modal-content button {
         width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
     }
 
-    .dataInColForm {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    #rentalModal form {
-        gap: 0.1rem;
+    .togglePastRentalsBtn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
+    .everything {
+        padding: 0.75rem 0.5rem;
+    }
+
     .card {
-        padding: 0.9375rem;
+        padding: 1.25rem 0.875rem;
     }
-    
-    h2 {
-        font-size: 1.375rem;
+
+    #carName, h2 {
+        font-size: 1.6rem;
     }
-    
-    p {
-        font-size: 0.9375rem;
+
+    #carDescription {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.95rem;
     }
-    
-    #occupiedListContainer {
-        padding: 0.9375rem;
+
+    .modifyBtn, .removeBtn {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.9rem;
     }
-    
-    #occupiedList li .dataInRowForm, #pastOccupiedList li .dataInRowForm {
-        flex-direction: row;
+
+    #occupiedList li .rentalData, #pastOccupiedList li .rentalData {
+        flex-direction: column;
         align-items: flex-start;
-        justify-content: space-evenly;
         gap: 0.5rem;
-    }
-    
-    #occupiedList button {
-        width: 100%;
-    }
-    
-    #occupiedList .dataInRowForm span, #pastOccupiedList .dataInRowForm span {
-        display: block;
-        width: 100%;
-        padding: 0.25rem 0;
-    }
-    
-    .modal-content {
-        width: 100%;
-        padding: 1rem;
-    }
-    
-    #newClientName, #existingClient {
-        font-size: 0.875rem;
-    }
-    
-    .modal-content label {
-        font-size: 0.9375rem;
-    }
-    
-    .modal-content input[type="text"],
-    .modal-content input[type="number"],
-    .modal-content input[type="tel"],
-    .modal-content select,
-    .modal-content textarea {
-        font-size: 0.8125rem;
-        padding: 0.375rem;
-    }
-
-    #rentalModal .modal-content {
-        width: 95%;
-        max-width: none;
-        padding: 1rem;
-        margin: 0.5rem;
-        overflow: auto;
-    }
-
-    #rentalModal form {
-        gap: 0.1rem;
-    }
-
-    #rentalModal label {
-        font-size: 0.9rem;
-    }
-
-    #rentalModal input[type="text"],
-    #rentalModal input[type="tel"],
-    #rentalModal input[type="number"],
-    #rentalModal select,
-    #rentalModal textarea {
-        padding: 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    #rentalModal .modal-buttons {
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 1rem;
-    }
-
-    #rentalModal .modal-buttons button {
-        width: 48%;
-        padding: 0.6rem;
-    }
-
-    #rentalModal form > div {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    #rentalModal form > div > span {
-        align-self: center;
-    }
-
-    #rentalModal #existingClient {
-        width: 100%;
-    }
-
-    .flatpickr-calendar {
-        display: none !important;
-        visibility: hidden;
-        pointer-events: none;
-        font-family: Arial, sans-serif;
-    }
-}
-
-@media (max-width: 380px) {
-    #occupiedList input[type="text"],
-    #occupiedList input[type="number"],
-    #pastOccupiedList input[type="text"],
-    #pastOccupiedList input[type="number"] {
-        padding: 4px;
-        font-size: 0.85rem;
-    }
-    
-    #occupiedListContainer {
-        padding: 0.5rem;
-    }
-    
-    #occupiedList li .dataInRowForm, #pastOccupiedList li .dataInRowForm {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.1rem;
-    }
-    
-    #occupiedList button {
-        width: 100%;
-    }
-    
-    #occupiedList .dataInRowForm span, #pastOccupiedList .dataInRowForm span {
-        display: block;
-        width: 100%;
-        padding: 0.25rem 0;
-    }
-
-    #rentalModal .modal-content {
-        width: 100%;
-        padding: 1rem 0.75rem;
-    }
-
-    #rentalModal .modal-buttons {
-        margin-top: 0.5rem;
-        gap: 0.5rem;
-    }
-
-    #rentalModal .modal-buttons button {
-        width: 100%;
-    }
-
-    #rentalModal input[type="text"],
-    #rentalModal textarea {
-        font-size: 0.85rem;
-    }
-
-    .flatpickr-calendar {
-        display: none !important;
-        visibility: hidden;
-        pointer-events: none;
-        font-family: Arial, sans-serif;
-    }
-}
-
-@media (max-width: 360px) {
-    #occupiedList li .dataInRowForm, #pastOccupiedList li .dataInRowForm {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.1rem;
     }
 }

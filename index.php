@@ -171,11 +171,12 @@ if ($result->num_rows > 0) {
       justify-content: center;
       padding: 20px;
       position: relative;
+      overflow: hidden;
     }
     
     .car-image img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       transition: transform 0.3s ease;
     }
@@ -287,6 +288,7 @@ if ($result->num_rows > 0) {
       display: flex;
       flex-direction: column;
       gap: 8px;
+      min-width: 200px;
     }
 
     .filter-group label {
@@ -300,7 +302,7 @@ if ($result->num_rows > 0) {
       font-size: 1rem;
       border-radius: 8px;
       border: 2px solid #e0e0e0;
-      min-width: 100%;
+      width: 200px;
       transition: all 0.3s ease;
       background-color: #f8f9fa;
     }
@@ -486,6 +488,14 @@ if ($result->num_rows > 0) {
       color: var(--text-dark);
     }
 
+    .other-filters {
+      gap: 20px;
+    }
+
+    .date-filters {
+      gap: 20px;
+    }
+
     @media (max-width: 1024px) {
       .hero h1 span:nth-child(2) {
         display: block;
@@ -493,6 +503,14 @@ if ($result->num_rows > 0) {
 
       .car-image {
         height: 220px;
+      }
+
+      .filter-group {
+        min-width: 180px;
+      }
+      
+      .filter input, .filter select {
+        width: 180px;
       }
     }
 
@@ -543,8 +561,9 @@ if ($result->num_rows > 0) {
       }
 
       .filter input, .filter select {
-        min-width: 120px;
-        font-size: 12px;
+        width: 160px;
+        padding: 10px 12px;
+        font-size: 0.9rem;`
       }
 
       .filter button {
@@ -555,8 +574,33 @@ if ($result->num_rows > 0) {
       .rentEdit {
         display: flex;
         flex-direction: row;
-        margin: 0 auto;
-        gap: 5px;
+        /* gap: 5px; */
+      }
+
+      .other-filters {
+        flex-wrap: wrap;
+      }
+
+      .filter-group {
+        min-width: 160px;
+      }
+
+      .date-filters {
+        flex-wrap: wrap;
+      }
+
+      .date-filters .filter-group {
+        min-width: 200px;
+      }
+
+      .date-filters .filter input {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .date-filters {
+        gap: 0px;
       }
     }
 
@@ -573,8 +617,6 @@ if ($result->num_rows > 0) {
       .rentEdit {
         display: flex;
         flex-direction: row;
-        margin: 0 auto;
-        gap: 1px;
       }
 
       .featured-cars {
@@ -621,6 +663,65 @@ if ($result->num_rows > 0) {
         text-align: center;
         border-bottom: var(--border);
       }
+
+      .filter-group {
+        min-width: 140px;
+      }
+      
+      .filter input, .filter select {
+        width: 140px;
+        padding: 8px 10px;
+        font-size: 0.85rem;
+      }
+
+      .date-filters .filter-group {
+        min-width: 180px;
+      }
+
+      .date-filters .filter input {
+        width: 180px;
+      }
+
+      .filter-buttons {
+        width: 100%;
+      }
+
+      .filter-buttons button {
+        width: 100%;
+      }
+      
+      .other-filters {
+        gap: 5px;
+      }
+      .other-filters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+      }
+
+      .filter-group {
+        min-width: unset;
+        width: 100%;
+      }
+
+      .filter input, .filter select {
+        width: 100%;
+      }
+
+      .date-filters {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .date-filters .filter-group {
+        min-width: unset;
+        width: 100%;
+      }
+
+      .date-filters .filter input {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -642,50 +743,53 @@ if ($result->num_rows > 0) {
     
     <div class="container">
       <!-- Filter Section -->
-      <?php if($isAdmin) {?>
       <section class="filter-section">
-        <div class="filter">
-          <div class="filter-group">
-            <label for="makeFilter">Car Make</label>
-            <input type="text" id="makeFilter" placeholder="e.g., Volkswagen">
+        <div class="filter" style="display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center;">
+          <div class="other-filters" style="display: flex; flex-direction: row; justify-content: center;">
+            <div class="filter-group">
+              <label for="makeFilter">Car Make</label>
+              <input type="text" id="makeFilter" placeholder="e.g., Volkswagen">
+            </div>
+            <div class="filter-group">
+              <label for="transmissionFilter">Transmission</label>
+              <select id="transmissionFilter">
+                <option value="">All Transmissions</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="fuelTypeFilter">Fuel Type</label>
+              <select id="fuelTypeFilter">
+                <option value="">All Fuel Types</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Electric">Electric</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="seatsFilter">Number of Seats</label>
+              <select id="seatsFilter">
+                <option value="">All Seats</option>
+                <option value="2">2 Seats</option>
+                <option value="4">4 Seats</option>
+                <option value="5">5 Seats</option>
+                <option value="7">7 Seats</option>
+              </select>
+            </div>
           </div>
-          <div class="filter-group">
-            <label for="transmissionFilter">Transmission</label>
-            <select id="transmissionFilter">
-              <option value="">All Transmissions</option>
-              <option value="Automatic">Automatic</option>
-              <option value="Manual">Manual</option>
-            </select>
+          <div class="date-filters" style="display: flex; flex-direction: row; justify-content: center;">
+            <div class="filter-group" style="flex: 1; max-width: 300px;">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate">
+            </div>
+            <div class="filter-group" style="flex: 1; max-width: 300px;">
+              <label for="endDate">End Date</label>
+              <input type="date" id="endDate">
+            </div>
           </div>
-          <div class="filter-group">
-            <label for="fuelTypeFilter">Fuel Type</label>
-            <select id="fuelTypeFilter">
-              <option value="">All Fuel Types</option>
-              <option value="Petrol">Petrol</option>
-              <option value="Diesel">Diesel</option>
-              <option value="Hybrid">Hybrid</option>
-              <option value="Electric">Electric</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label for="seatsFilter">Number of Seats</label>
-            <select id="seatsFilter">
-              <option value="">All Seats</option>
-              <option value="2">2 Seats</option>
-              <option value="4">4 Seats</option>
-              <option value="5">5 Seats</option>
-              <option value="7">7 Seats</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label for="startDate">Start Date</label>
-            <input type="date" id="startDate">
-          </div>
-          <div class="filter-group">
-            <label for="endDate">End Date</label>
-            <input type="date" id="endDate">
-          </div>
-          <div class="filter-buttons">
+          <div class="filter-buttons" style="display: flex; flex-direction: row; gap: 10px; justify-content: center;">
             <button onclick="filterCars()">
               <i class="fas fa-filter"></i> Apply Filters
             </button>
@@ -695,7 +799,6 @@ if ($result->num_rows > 0) {
           </div>
         </div>
       </section>
-      <?php }?>
       
       <!-- Featured Cars -->
       <section id="featured">

@@ -197,7 +197,6 @@
         display: none;
         background: var(--primary-dark);
         text-align: center;
-        padding: 10px 0;
         width: 100%;
         border-top: 1px solid rgba(255,255,255,0.1);
     }
@@ -265,6 +264,10 @@
         .auth-menu {
             font-size: 1.2rem;
             padding: 6px 12px;
+        }
+
+        ul li {
+            justify-self: center;
         }
     }
     

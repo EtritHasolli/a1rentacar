@@ -133,6 +133,12 @@
         .footer .logo {
             margin: 0 auto 16px auto;
         }
+
+        .orariPunes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 </style>
 <body>
