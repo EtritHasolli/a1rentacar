@@ -586,21 +586,24 @@ if ($result->num_rows > 0) {
       }
 
       .date-filters {
-        flex-wrap: wrap;
+        flex-direction: column;
+        /* width: 100%; */
+        gap: 10px;
       }
 
       .date-filters .filter-group {
-        min-width: 200px;
+        min-width: unset;
+        width: 100%;
       }
 
       .date-filters .filter input {
-        width: 200px;
+        width: 100%;
       }
     }
 
     @media (max-width: 520px) {
       .date-filters {
-        gap: 0px;
+        gap: 10px;
       }
     }
 
@@ -712,6 +715,7 @@ if ($result->num_rows > 0) {
       .date-filters {
         flex-direction: column;
         width: 100%;
+        gap: 10px;
       }
 
       .date-filters .filter-group {
@@ -926,6 +930,13 @@ if ($result->num_rows > 0) {
         const seats = document.getElementById('seatsFilter').value;
         const start = new Date(document.getElementById('startDate').value);
         const end = new Date(document.getElementById('endDate').value);
+
+        // Check if both dates are selected and start date is after end date
+        if (start && end && start > end) {
+          alert('Start date cannot be after end date!');
+          hideLoading();
+          return;
+        }
 
         const filtered = cars.filter(car => {
           const makeMatch = !make || car.details.make.toLowerCase().includes(make);
