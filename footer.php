@@ -28,7 +28,6 @@
         color: #fff;
         padding: 48px 20px 24px 20px;
         margin-top: auto;
-        border-top: 4px solid #25D366;
         box-shadow: 0 -2px 24px rgba(0,0,0,0.08);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -56,7 +55,7 @@
     .footer h3 { 
         font-size: 1.15rem; 
         margin-bottom: 12px; 
-        color: #25D366;
+        color: white;
         letter-spacing: 1px;
     }
     
@@ -83,7 +82,7 @@
     }
     
     .footer a {
-        color: #25D366;
+        color: white;
         text-decoration: none;
         transition: color 0.2s;
         font-weight: 500;
